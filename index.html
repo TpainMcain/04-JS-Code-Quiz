@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!-- Link html to css and bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Link css and bootstrap to html. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <title>Javascript Coding Quiz</title>
 </head>
 
 <body>
-<!-- Creates view highscore button and timer -->
+<!-- Creates view highscore button and timer. -->
     <div class="container mt-5">
         <div class="row">
             <button type="button" class="col-md-4 h2" id="viewHS">View Highscores</button>
@@ -23,13 +24,13 @@
 <!-- A jumbotron indicates a big box for calling extra attention to some special content or information. https://www.w3schools.com/bootstrap/bootstrap_jumbotron_header.asp -->
     <div class="container mt-3">
         <div class="jumbotron jumbotron-fluid text-center">
-<!-- Container for Start screen. Press start to play. Hidden when one of the other containers is being viewed. -->
+<!-- Container for Start screen. Press start to play.-->
             <div class="container" id="startScreen">
                 <h1 class="h1 mb-4">Javascript Coding Quiz</h1>
                 <p class="lead mb-4">Try to answer the following Javascript related questions within the time limit. Incorrect answers will penalize your time by ten seconds!</p>
                 <button type="button" class="btn btn-primary btn-lg" id="startTest">Start</button>
             </div>
-<!-- Containter for the quiz questions and answers. Initially hidden from view -->
+<!-- Containter for the quiz questions and answers. -->
         <div class="container" id="test">
             <h1 class="h1 mb-4" id="questions"></h1>
                 <div class="container" id="answers">
@@ -39,14 +40,14 @@
                     <div class="row"><button type="button" class="btn btn-primary btn-lg btn-block mb-3 text-left" id="3"></button></div>
                 </div>
             </div>
-<!-- Containter for submitting scores. Initially hidden from view -->
+<!-- Containter for submitting scores. -->
         <div class="container" id="submitScores">
             <h1 class="h1 mb-4">All done!</h1>
                 <p class="lead mb-4">Your final score: <span id="score"></span></p>
                 <p class="lead mb-4">Enter initials: <input type="text " id="initials"></p>
                 <button type="button" class="btn btn-primary btn-lg" id="submitInitials">Submit</button>
             </div>
-<!-- Containter for viewing highscores. Initially hidden from view -->
+<!-- Containter for viewing highscores. -->
         <div class="container" id="highScores">
             <h1 class="h1 mb-4 font-weigth-bold">Highscores</h1>
             <div class="container h4 mb-4" id="scores"></div>
@@ -55,11 +56,14 @@
             </div>
         </div>
     </div>
-
-
-
-<!-- Link html to Jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-
+<!-- Link js to html -->
+    <script src="./assets/js/script.js"></script>
+<!-- Link jQuery, Popper.js, Bootstrap JS to html-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
