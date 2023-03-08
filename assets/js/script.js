@@ -11,7 +11,7 @@ var answersEl = document.querySelector("#answers");
 var submitScoreEl = document.querySelector("#submitScores");
 var userScoreEl = document.querySelector("#score");
 var initialsEl = document.querySelector("#initials");
-var submitInitialsBtnEl = document.querySelector("#submitInitials");
+var submitInitialsBtn = document.querySelector("#submitInitials");
 // Highscores screen:
 var highScoresEl = document.querySelector("#highScores");
 var scoresEl = document.querySelector("#scores");
@@ -99,3 +99,46 @@ function renderHighScores() {
         scoreItem.setAttribute("style", "background-color:PaleTurquoise;");
         scoreItem.textContent = `${(i + 1)}. ${highScores[i].username} - ${highScores[i].userScore}`;
         scoresEl.appendChild(scoreItem);}}
+// 
+
+
+// Adds event listener to View Highscores button to display high scores.
+viewHSBtn.addEventListener("click", function () {
+    hide(startScreenEl);
+    hide(testEl);
+    hide(submitScoreEl);
+    renderHighScores();
+    stopTimer();
+    reset();});
+// Adds event listner to Start button to begin the test and start timer.
+startTestBtn.addEventListener("click", function () {
+    hide(startScreenEl);
+    startTimer();
+    renderQuestion();
+    show(testEl);});
+// Adds event listener when clicking on an answer
+answersEl.addEventListener("click", function (e) {
+    if (e.target.matches("button")) {
+        checkAnswer(e.target);
+        nextQuestion();}});
+// Adds event listener to Submit button that pushes stored values to local storage. Initilizes function to show High Score screen.
+submitInitialsBtn.addEventListener("click", function () {
+    let initValue = initialsEl.value.trim();
+    if (initValue) {
+        let userScore = { username: initValue, userScore: score };
+        initialsEl.value = '';
+        highScores = JSON.parse(localStorage.getItem("scores")) || [];
+        highScores.push(userScore)
+        localStorage.setItem("scores", JSON.stringify(highScores));
+        hide(submitScoreEl);
+        renderHighScores();
+        reset();}});
+// Adds event listener to Back button that returns user to start screen.
+goBackBtnEl.addEventListener("click", function () {
+    hide(highScoresEl);
+    show(startScreenEl);});
+// Adds event lisenter to Reset Scores button that resets high scores.
+resetScoresBtn.addEventListener("click", function () {
+    highScores = [];
+    localStorage.setItem("scores", JSON.stringify(highScores));
+    renderHighScores();});
