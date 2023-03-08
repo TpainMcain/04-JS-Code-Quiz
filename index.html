@@ -23,13 +23,13 @@
 <!-- A jumbotron indicates a big box for calling extra attention to some special content or information. https://www.w3schools.com/bootstrap/bootstrap_jumbotron_header.asp -->
     <div class="container mt-3">
         <div class="jumbotron jumbotron-fluid text-center">
-<!-- Container for Start screen. Press start to play. Hidden when one of the other containers is being viewed. -->
+<!-- Container for Start screen. Press start to play.-->
             <div class="container" id="startScreen">
                 <h1 class="h1 mb-4">Javascript Coding Quiz</h1>
                 <p class="lead mb-4">Try to answer the following Javascript related questions within the time limit. Incorrect answers will penalize your time by ten seconds!</p>
                 <button type="button" class="btn btn-primary btn-lg" id="startTest">Start</button>
             </div>
-<!-- Containter for the quiz questions and answers. Initially hidden from view -->
+<!-- Containter for the quiz questions and answers. -->
         <div class="container" id="test">
             <h1 class="h1 mb-4" id="questions"></h1>
                 <div class="container" id="answers">
@@ -39,14 +39,14 @@
                     <div class="row"><button type="button" class="btn btn-primary btn-lg btn-block mb-3 text-left" id="3"></button></div>
                 </div>
             </div>
-<!-- Containter for submitting scores. Initially hidden from view -->
+<!-- Containter for submitting scores. -->
         <div class="container" id="submitScores">
             <h1 class="h1 mb-4">All done!</h1>
                 <p class="lead mb-4">Your final score: <span id="score"></span></p>
                 <p class="lead mb-4">Enter initials: <input type="text " id="initials"></p>
                 <button type="button" class="btn btn-primary btn-lg" id="submitInitials">Submit</button>
             </div>
-<!-- Containter for viewing highscores. Initially hidden from view -->
+<!-- Containter for viewing highscores. -->
         <div class="container" id="highScores">
             <h1 class="h1 mb-4 font-weigth-bold">Highscores</h1>
             <div class="container h4 mb-4" id="scores"></div>
