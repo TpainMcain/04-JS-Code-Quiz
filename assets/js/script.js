@@ -70,15 +70,32 @@ function displayMessage(m) {
             messageHr.remove();
             messageEl.remove();
     }, 2000);}
-// Create functions to hide and show html elements
+// Create functions to hide and show html elements.
 function hide(element) {
     element.style.display = "none";}
 function show(element) {
     element.style.display = "block";}
-// Create function to reset variables
+// Create function to reset variables.
 function reset() {
     score = 0;
     currentQ = 0;
     secondsElapsed = 0;
-    timerEl.textContent = 0;
-}
+    timerEl.textContent = 0;}
+// Creates function to render the current question.
+function renderQuestion() {
+    questionsEl.textContent = questions[currentQ].title;
+    for (i = 0; i < answersEl.children.length; i++) {
+        answersEl.children[i].children[0].textContent = `${(i + 1)}: ${questions[currentQ].choices[i]}`;
+    }}
+// Creates function to render highscores pulled from local storage.
+function renderHighScores() {
+    scoresEl.innerHTML = "";
+    show(highScoresEl);
+    highScores = JSON.parse(localStorage.getItem("scores"));
+    for (let i = 0; i < highScores.length; i++) {
+        let scoreItem = document.createElement("div");
+        scoreItem.className += "row mb-3 p-2";
+        console.log(scoreItem)
+        scoreItem.setAttribute("style", "background-color:PaleTurquoise;");
+        scoreItem.textContent = `${(i + 1)}. ${highScores[i].username} - ${highScores[i].userScore}`;
+        scoresEl.appendChild(scoreItem);}}
