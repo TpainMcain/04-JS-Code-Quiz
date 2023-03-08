@@ -33,9 +33,40 @@ function startTimer() {
         if (secondsElapsed >= timeGiven) {
             currentQ = questions.length;
             nextQuestion();
-        }
-    }, 1000);
-} // Create function for stopping the timer.
+        }}, 1000);} 
+// Create function for stopping the timer.
 function stopTimer() {
-    clearInterval(interval);
-}
+    clearInterval(interval);} 
+// Create function that will hide current questions and display the next one. Display sumbit score screen if last question. 
+function nextQuestion() {
+    currentQ++;
+    if (currentQ < questions.length) {
+        renderQuestion();
+    } else {
+        stopTimer();
+        if ((timeGiven - secondsElapsed) > 0)
+            score += (timeGiven - secondsElapsed);
+        userScoreEl.textContent = score;
+        hide(testEl);
+        show(submitScoreEl);
+        timerEl.textContent = 0;}} 
+// Create function to check user answer and update score. 
+function checkAnswer(answer) {
+    if (questions[currentQ].answer == questions[currentQ].choices[answer.id]) {
+        score += 5;
+        displayMessage("That's right!");
+    }
+    else {
+        secondsElapsed += 10;
+        displayMessage("Incorrect.");}}
+// Create function to display correct/incorrect message for two seconds. 
+function displayMessage(m) {
+    let messageHr = document.createElement("hr");
+    let messageEl = document.createElement("div");
+    messageEl.textContent = m;
+    document.querySelector(".jumbotron").appendChild(messageHr);
+    document.querySelector(".jumbotron").appendChild(messageEl);
+    setTimeout(function () {
+            messageHr.remove();
+            messageEl.remove();
+    }, 2000);}
