@@ -70,3 +70,15 @@ function displayMessage(m) {
             messageHr.remove();
             messageEl.remove();
     }, 2000);}
+// Create functions to hide and show html elements
+function hide(element) {
+    element.style.display = "none";}
+function show(element) {
+    element.style.display = "block";}
+// Create function to reset variables
+function reset() {
+    score = 0;
+    currentQ = 0;
+    secondsElapsed = 0;
+    timerEl.textContent = 0;
+}
