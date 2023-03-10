@@ -8,7 +8,7 @@ var testEl = document.querySelector("#test");
 var questionsEl = document.querySelector("#questions");
 var answersEl = document.querySelector("#answers");
 // Submitting scores screen:
-var submitScoreEl = document.querySelector("#submitScores");
+var submitScores = document.querySelector("#submitScores");
 var userScoreEl = document.querySelector("#score");
 var initialsEl = document.querySelector("#initials");
 var submitInitialsBtn = document.querySelector("#submitInitials");
@@ -24,6 +24,7 @@ var highScores = [];
 var interval;
 var timeGiven = 75;
 var secondsElapsed = 0;
+
 // Create function for starting and updating timer.
 function startTimer() {
     timerEl.textContent = timeGiven;
@@ -48,7 +49,7 @@ function nextQuestion() {
             score += (timeGiven - secondsElapsed);
         userScoreEl.textContent = score;
         hide(testEl);
-        show(submitScoreEl);
+        show(submitScores);
         timerEl.textContent = 0;}} 
 // Create function to check user answer and update score. 
 function checkAnswer(answer) {
@@ -99,14 +100,12 @@ function renderHighScores() {
         scoreItem.setAttribute("style", "background-color:PaleTurquoise;");
         scoreItem.textContent = `${(i + 1)}. ${highScores[i].username} - ${highScores[i].userScore}`;
         scoresEl.appendChild(scoreItem);}}
-// 
-
 
 // Adds event listener to View Highscores button to display high scores.
 viewHSBtn.addEventListener("click", function () {
     hide(startScreenEl);
     hide(testEl);
-    hide(submitScoreEl);
+    hide(submitScores);
     renderHighScores();
     stopTimer();
     reset();});
@@ -130,11 +129,11 @@ submitInitialsBtn.addEventListener("click", function () {
         highScores = JSON.parse(localStorage.getItem("scores")) || [];
         highScores.push(userScore)
         localStorage.setItem("scores", JSON.stringify(highScores));
-        hide(submitScoreEl);
+        hide(submitScores);
         renderHighScores();
         reset();}});
 // Adds event listener to Back button that returns user to start screen.
-goBackBtnEl.addEventListener("click", function () {
+goBackBtn.addEventListener("click", function () {
     hide(highScoresEl);
     show(startScreenEl);});
 // Adds event lisenter to Reset Scores button that resets high scores.
