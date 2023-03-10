@@ -1,0 +1,11 @@
+#startScreen, #test, #submitScores, #highScores {
+    width: 70%;
+}
+
+#test, #submitScores, #highScores {
+    display: none;
+}
+
+.jumbotron {
+    background-color: rgb(213, 219, 217);
+}
