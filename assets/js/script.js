@@ -1,3 +1,34 @@
+var questions = [
+    {
+        title: "Javascript is an _______ language?",
+        choices: ["Object-oriented", "Object-based", "Procedural", "None of the above"],
+        answer: "Object-oriented"
+    },
+    {
+        title: "Arrays in JavaScript are defined by which of the following statements?",
+        choices: ["It is an ordered list of values", "It is an ordered list of objects", "It is an ordered list of string", "It is an ordered list of functions"],
+        answer: "It is an ordered list of values"
+    },
+    {
+        title: "Which of the following keywords is used to define a variable in Javascript?",
+        choices: ["var", "let", "Both A and B", "None of the Above"],
+        answer: "Both A and B"
+    },
+    {
+        title: "Which of the following is not javascript data types?",
+        choices: ["Null type", "Undefined type", "Number type", "All of the above"],
+        answer: "All of the mentioned"
+    },
+    {
+        title: "Which of the following can be used to call a JavaScript Code Snippet?",
+        choices: ["Function/Method", "Preprocessor", "Triggering Event", "RMI"],
+        answer: "Function/Method"
+    },
+    {
+        title: "Which of the following function of Array object joins all elements of an array into a string?",
+        choices: ["concat()", "join()", "pop()", "map()"],
+        answer: "join()"
+    }];
 // Declare variables for html elements. Start screen:
 var viewHSBtn = document.querySelector("#viewHS");
 var timerEl = document.querySelector("#timer");
