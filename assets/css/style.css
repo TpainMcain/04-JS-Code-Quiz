@@ -1,5 +1,7 @@
 #startScreen, #test, #submitScores, #highScores {
     width: 70%;
+    color: #000000;
+    font-weight: bold;
 }
 
 #test, #submitScores, #highScores {
@@ -7,5 +9,15 @@
 }
 
 .jumbotron {
-    background-color: rgb(213, 219, 217);
-}
+    margin-bottom: 0px;
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    background: rgb(255, 255, 255);
+    border: 5px;
+    border-style: dotted;
+    border-color: #000000;
+    }
+
+
