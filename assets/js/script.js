@@ -17,7 +17,7 @@ var questions = [
     {
         title: "Which of the following is not javascript data types?",
         choices: ["Null type", "Undefined type", "Number type", "All of the above"],
-        answer: "All of the mentioned"
+        answer: "All of the above"
     },
     {
         title: "Which of the following can be used to call a JavaScript Code Snippet?",
@@ -128,7 +128,7 @@ function renderHighScores() {
         let scoreItem = document.createElement("div");
         scoreItem.className += "row mb-3 p-2";
         console.log(scoreItem)
-        scoreItem.setAttribute("style", "background-color:PaleTurquoise;");
+        scoreItem.setAttribute("style", "background-color:#1e3961;color:white;");
         scoreItem.textContent = `${(i + 1)}. ${highScores[i].username} - ${highScores[i].userScore}`;
         scoresEl.appendChild(scoreItem);}}
 
