@@ -8,7 +8,7 @@ A timed coding quiz with multiple-choice questions. This app will run in the bro
 https://tpainmcain.github.io/Web-APIs-Challenge-Code-Quiz/
 
 # Screenshots
-![Alt text](assets\images\jsq1.jpg?raw=true "Optional Title")
+![Alt text](/assets/images/jsq1.jpg?raw=true "Optional Title")
 
 # Getting Started
 N/A
