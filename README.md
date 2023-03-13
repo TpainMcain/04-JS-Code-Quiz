@@ -28,5 +28,5 @@ N/A
 MIT License
 
 # Acknowledgments
-https://github.com/nhanng19
-\https://github.com/kqarlos
+https://github.com/nhanng19  
+https://github.com/kqarlos
