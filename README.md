@@ -13,7 +13,7 @@ https://tpainmcain.github.io/Web-APIs-Challenge-Code-Quiz/
 ![Alt text](/assets/images/jsq3.jpg?raw=true "Highscores")
 
 # Getting Started
-N/A
+Open Index.html with default web browser. Press start to play!
 
 # Dependencies
 N/A
